@@ -25,16 +25,43 @@ h1{
     margin: 70px auto;
     border-radius: 10px;
 }
-.container ul{
-    align-items: center;
-}
+
 .container ul li{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    overflow: hidden;
+    /* overflow: hidden; */
     float: left;
-    margin: 25px;
+    margin: 22px;
+    border: 3px solid black;
+    position: relative;
+    
+}
+
+.container img{
+    border-radius: 50%;
+}
+.container span{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(202, 202, 202, .5);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 200px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+    text-shadow: 0 2px 2px white;
+}
+
+.container li a:hover span{
+    transform: rotate(360deg);
+    opacity: 1;
 }
 
 .clear{
