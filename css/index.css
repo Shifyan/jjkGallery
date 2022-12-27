@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Jujutsu Kaisen.ttf';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/JujutsuKaisen.woff') format('woff');
+}
+
+body{
+    font: 18px/36px 'Jujutsu Kaisen.ttf', 'Arial Narrow';
+    background-color: rgb(220, 221, 221);
+}
+
+h1{
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 50px;
+    text-shadow: 2px 2px 2px rgb(73, 65, 65, .3);
+}
+
+.container{
+    width: 1000px;
+    background-color: white;
+    box-shadow: 0 0 3px 5px rgba(99, 99, 99, 0.3) ;
+    margin: 70px auto;
+    border-radius: 10px;
+}
+
+.container ul li{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
