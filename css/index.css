@@ -38,7 +38,7 @@ h1{
     
 }
 
-.container img{
+img{
     border-radius: 50%;
 }
 .container span{
@@ -64,6 +64,89 @@ h1{
     opacity: 1;
 }
 
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(63, 63, 63, 0);
+    z-index: 99;
+    transition: .8s;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.overlay:target{
+    width: auto;
+    height: auto;
+    right: 0;
+    left: 0;
+    background-color: rgb(63, 63, 63, 0.8);
+}
+
+.full {
+    border-radius: 10%;
+    max-height: 100%;
+    box-shadow: 0 0 10px 10px rgba(114, 114, 114, 0.8);
+}
+
+.close img{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 440px;
+    border: 2px white solid;
+    opacity: 0;
+}
+
+.overlay:target .full{
+    animation: animasiFadeIn 1s;
+}
+
+.overlay:target .close img{
+    animation: animasiFadeClose .5s 1s forwards;
+}
 .clear{
     clear: both;
+}
+
+.footer{
+    background-color: black;
+    border-radius: 10px 10px 0 0;
+    height: 50px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.footer p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+@keyframes animasiFadeIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: (1);
+        opacity: 1;
+    }
+}
+
+@keyframes animasiFadeClose {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
